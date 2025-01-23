@@ -6,24 +6,32 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := lynx
 DEVICE_PATH := device/google/lynx
 VENDOR_PATH := vendor/google/lynx
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
-$(call inherit-product, device/google/gs201/lineage_common.mk)
-$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
+$(call inherit-product, device/google/gs201/pixelage_common.mk)
+$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-pixelage.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 7a
-PRODUCT_NAME := lineage_$(DEVICE_CODENAME)
+PRODUCT_NAME := pixelage_$(DEVICE_CODENAME)
 
 # Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
+
+# Pixelage
+PIXELAGE_BUILDTYPE := OFFICIAL
+PIXELAGE_MAINTAINER := Cosmic
+PRODUCT_NO_CAMERA := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="lynx-user 15 AP4A.250105.002 12701944 release-keys" \

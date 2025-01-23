@@ -1162,7 +1162,7 @@ overlay/framework-res__lynx_beta__auto_generated_rro_vendor.apk
 lib/modules
 
 # Exclude files that compile with BUILD_WITHOUT_VENDOR := false
-# or manually added as build targets in device-lineage.mk
+# or manually added as build targets in device-pixelage.mk
 
 # Audio
 lib/libaudioroutev2.so
