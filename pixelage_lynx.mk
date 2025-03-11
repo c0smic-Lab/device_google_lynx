@@ -34,8 +34,8 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="lynx-user 15 AP4A.250205.002 12821496 release-keys" \
-    BuildFingerprint=google/lynx/lynx:15/AP4A.250205.002/12821496:user/release-keys \
+    BuildDesc="lynx-user 15 BP1A.250305.019 13003188 release-keys" \
+    BuildFingerprint=google/lynx/lynx:15/BP1A.250305.019/13003188:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
